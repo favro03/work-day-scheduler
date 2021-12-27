@@ -6,16 +6,16 @@ var todaysDate = moment().format("dddd, MMMM  Do");
 //variables for time formatted to 24 hours
 var currentTime = moment().format("H");
 
-//row variables
-var nineRowEl = document.getElementById("nine");
-var tenRowEl = document.getElementById("ten");
-var elevenRowEl = document.getElementById("eleven");
-var tweleveRowEl = document.getElementById("tweleve");
-var oneRowEl = document.getElementById("one-thirteen");
-var twoRowEl = document.getElementById("two-fourteen");
-var threeRowEl = document.getElementById("three-fifteen");
-var fourRowEl = document.getElementById("four-sixteen");
-var fiveRowEl = document.getElementById("five-seventeen");
+//text row variables
+var nineRowEl = document.getElementById("task-nine");
+var tenRowEl = document.getElementById("task-ten");
+var elevenRowEl = document.getElementById("task-eleven");
+var tweleveRowEl = document.getElementById("task-tweleve");
+var oneRowEl = document.getElementById("task-one");
+var twoRowEl = document.getElementById("task-two");
+var threeRowEl = document.getElementById("task-three");
+var fourRowEl = document.getElementById("task-four");
+var fiveRowEl = document.getElementById("task-five");
 
 var nine = document.getElementById("nine").getAttribute('data-value');
 var ten = document.getElementById("ten").getAttribute('data-value');
@@ -38,12 +38,13 @@ var backgroundChange = function(){
     if (currentTime === nine){
         nineRowEl.classList.add("present");
     }
-    else if (currentTime > nine) {
-        nineRowEl.classList.add("future");
-    }
     else if (currentTime < nine){
         nineRowEl.classList.add("past");
     }
+    else if (currentTime > nine) {
+        nineRowEl.classList.add("future");
+    }
+
     //10AM
     if (currentTime === ten){
         tenRowEl.classList.add("present");
@@ -123,7 +124,7 @@ var backgroundChange = function(){
     }
     else if (currentTime < five) {
         fiveRowEl.classList.add("future");
-    }    
+    } 
 };
 
 //updates the page every 30 minutes
@@ -134,3 +135,25 @@ setInterval(function() {
 
 
 
+/*
+// save button in modal was clicked
+$("#task-form-modal .btn-save").click(function() {
+    // get form values
+    var taskText = $("#modalTaskDescription").val();
+    var taskDate = $("#modalDueDate").val();
+  
+    if (taskText && taskDate) {
+      createTask(taskText, taskDate, "toDo");
+  
+      // close modal
+      $("#task-form-modal").modal("hide");
+  
+      // save in tasks array
+      tasks.toDo.push({
+        text: taskText,
+        date: taskDate
+      });
+  
+      saveTasks();
+    }
+  });*/
