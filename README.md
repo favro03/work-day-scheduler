@@ -18,6 +18,6 @@ Here is a screenshot of the completed site:
 ## Link
 Link to the refactored work day scheduler:
 
-TBD
+https://favro03.github.io/work-day-scheduler/
 
 

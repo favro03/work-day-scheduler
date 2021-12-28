@@ -2,7 +2,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  color: black;
 }
 
 textarea{
@@ -69,7 +68,8 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn span:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  color: black;
 }
