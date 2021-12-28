@@ -133,6 +133,53 @@ setInterval(function() {
     location.reload();
 }, (1000 * 60)*30);
 
+$(document).ready(function(){
+    $("#btn9").click(function(){
+        var taskItem9 = $("textarea[name=nineAMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-9AM", JSON.stringify(taskItem9));
+    });
+    $("#btn10").click(function(){
+        var taskItem9 = $("textarea[name=tenAMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-10AM", JSON.stringify(taskItem9));
+    });
+    $("#btn11").click(function(){
+        var taskItem9 = $("textarea[name=elevenAMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-11AM", JSON.stringify(taskItem9));
+    });
+    $("#btn12").click(function(){
+        var taskItem9 = $("textarea[name=twelevePMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-12PM", JSON.stringify(taskItem9));
+    });
+    $("#btn1").click(function(){
+        var taskItem9 = $("textarea[name=onePMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-1PM", JSON.stringify(taskItem9));
+    });
+    $("#btn2").click(function(){
+        var taskItem9 = $("textarea[name=twoPMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-2PM", JSON.stringify(taskItem9));
+    });
+    $("#btn3").click(function(){
+        var taskItem9 = $("textarea[name=threePMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-3PM", JSON.stringify(taskItem9));
+    });
+    $("#btn4").click(function(){
+        var taskItem9 = $("textarea[name=fourPMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-4PM", JSON.stringify(taskItem9));
+    });
+    $("#btn5").click(function(){
+        var taskItem9 = $("textarea[name=fivePMTask]").val();
+        console.log(taskItem9);
+        localStorage.setItem("task-5PM", JSON.stringify(taskItem9));
+    });
+});
 
 
 /*
