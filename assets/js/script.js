@@ -133,74 +133,73 @@ setInterval(function() {
     location.reload();
 }, (1000 * 60)*30);
 
+//Saves tasks to local storage
 $(document).ready(function(){
     $("#btn9").click(function(){
         var taskItem9 = $("textarea[name=nineAMTask]").val();
-        console.log(taskItem9);
         localStorage.setItem("task-9AM", JSON.stringify(taskItem9));
     });
     $("#btn10").click(function(){
-        var taskItem9 = $("textarea[name=tenAMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-10AM", JSON.stringify(taskItem9));
+        var taskItem10 = $("textarea[name=tenAMTask]").val();
+        localStorage.setItem("task-10AM", JSON.stringify(taskItem10));
     });
     $("#btn11").click(function(){
-        var taskItem9 = $("textarea[name=elevenAMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-11AM", JSON.stringify(taskItem9));
+        var taskItem11 = $("textarea[name=elevenAMTask]").val();
+        localStorage.setItem("task-11AM", JSON.stringify(taskItem11));
     });
     $("#btn12").click(function(){
-        var taskItem9 = $("textarea[name=twelevePMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-12PM", JSON.stringify(taskItem9));
+        var taskItem12 = $("textarea[name=twelevePMTask]").val();
+        localStorage.setItem("task-12PM", JSON.stringify(taskItem12));
     });
     $("#btn1").click(function(){
-        var taskItem9 = $("textarea[name=onePMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-1PM", JSON.stringify(taskItem9));
+        var taskItem1 = $("textarea[name=onePMTask]").val();
+        localStorage.setItem("task-1PM", JSON.stringify(taskItem1));
     });
     $("#btn2").click(function(){
-        var taskItem9 = $("textarea[name=twoPMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-2PM", JSON.stringify(taskItem9));
+        var taskItem2 = $("textarea[name=twoPMTask]").val();
+        localStorage.setItem("task-2PM", JSON.stringify(taskItem2));
     });
     $("#btn3").click(function(){
-        var taskItem9 = $("textarea[name=threePMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-3PM", JSON.stringify(taskItem9));
+        var taskItem3 = $("textarea[name=threePMTask]").val();
+        localStorage.setItem("task-3PM", JSON.stringify(taskItem3));
     });
     $("#btn4").click(function(){
-        var taskItem9 = $("textarea[name=fourPMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-4PM", JSON.stringify(taskItem9));
+        var taskItem4 = $("textarea[name=fourPMTask]").val();
+        localStorage.setItem("task-4PM", JSON.stringify(taskItem4));
     });
     $("#btn5").click(function(){
-        var taskItem9 = $("textarea[name=fivePMTask]").val();
-        console.log(taskItem9);
-        localStorage.setItem("task-5PM", JSON.stringify(taskItem9));
+        var taskItem5 = $("textarea[name=fivePMTask]").val();
+        localStorage.setItem("task-5PM", JSON.stringify(taskItem5));
     });
 });
 
+//loads data from local storage
+var loadTasks = function(){
+    taskItem9 = JSON.parse(localStorage.getItem("task-9AM"));
+    $("#task-nine").text(taskItem9);
 
-/*
-// save button in modal was clicked
-$("#task-form-modal .btn-save").click(function() {
-    // get form values
-    var taskText = $("#modalTaskDescription").val();
-    var taskDate = $("#modalDueDate").val();
-  
-    if (taskText && taskDate) {
-      createTask(taskText, taskDate, "toDo");
-  
-      // close modal
-      $("#task-form-modal").modal("hide");
-  
-      // save in tasks array
-      tasks.toDo.push({
-        text: taskText,
-        date: taskDate
-      });
-  
-      saveTasks();
-    }
-  });*/
+    taskItem10 = JSON.parse(localStorage.getItem("task-10AM"));
+    $("#task-ten").text(taskItem10);
+
+    taskItem11 = JSON.parse(localStorage.getItem("task-11AM"));
+    $("#task-eleven").text(taskItem11);
+
+    taskItem12 = JSON.parse(localStorage.getItem("task-12PM"));
+    $("#task-tweleve").text(taskItem12);
+
+    taskItem1 = JSON.parse(localStorage.getItem("task-1PM"));
+    $("#task-one").text(taskItem1);
+
+    taskItem2 = JSON.parse(localStorage.getItem("task-2PM"));
+    $("#task-tw0").text(taskItem2);
+
+    taskItem3 = JSON.parse(localStorage.getItem("task-3PM"));
+    $("#task-three").text(taskItem3);
+
+    taskItem4 = JSON.parse(localStorage.getItem("task-4PM"));
+    $("#task-four").text(taskItem4);
+
+    taskItem5 = JSON.parse(localStorage.getItem("task-5PM"));
+    $("#task-five").text(taskItem5);
+};
+loadTasks();
