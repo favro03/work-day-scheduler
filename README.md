@@ -13,7 +13,7 @@ A website showcasing work I have completed.
 ## Screenshot
 Here is a screenshot of the completed site:
 
-![Work Day Scheduler](/assets/images/portfolio-of-work.png)
+![Work Day Scheduler](/assets/images/Scheduler.png)
 
 ## Link
 Link to the refactored work day scheduler:
